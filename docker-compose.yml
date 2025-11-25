@@ -12,11 +12,3 @@ services:
       - db_data:/var/lib/postgresql/data
 volumes:
   db_data:
-
-docker exec -i simple-crud-tanstack-fastify-db-1 psql -U todo_user -d todo_db -f /api/migrations/create_todos.sql
-
-
-
-
-
-docker exec -it simple-crud-tanstack-fastify-db-1 psql -U todo_user -d tdocker exec -i $(docker ps -q -f "ancestor=postgres:15") psql -U todo_user -d todo_db -c api\migrations\create_todos.sql
