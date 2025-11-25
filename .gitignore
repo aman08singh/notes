@@ -1,0 +1,15 @@
+node_modules
+
+web/node_modules
+web/.DS_Store
+web/dist
+web/dist-ssr
+web/*.local
+web/count.txt
+web/.env
+web/.nitro
+web/.tanstack
+web/.wrangler
+
+api/node_modules
+api/dist
