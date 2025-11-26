@@ -1,16 +1,16 @@
 import {
   pgTable,
-  serial,
   text,
   varchar,
   timestamp,
-  boolean
+  boolean,
+  bigserial,
 } from "drizzle-orm/pg-core";
 
 export const todos = pgTable("todos", {
-  id: serial("id").primaryKey(),
+  id: bigserial("id", { mode: "number" }).primaryKey(),
   title: varchar("title", { length: 255 }).notNull(),
   description: text("description"),
   checked: boolean("checked").default(false),
-  createdAt: timestamp("created_at").defaultNow(),
+  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
 });
