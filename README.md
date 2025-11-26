@@ -1,5 +1,9 @@
 # This project is currently in development. Please do not follow the readme.
 
+Docker compose:
+
+docker compose up -d
+
 Running migration command:
 
 type api\migrations\create_todos.sql | docker exec -i simple-crud-tanstack-fastify-db-1 psql -U todo_user -d todo_db

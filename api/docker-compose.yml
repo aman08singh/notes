@@ -2,6 +2,7 @@ version: '3.8'
 services:
   db:
     image: postgres:15
+    container_name: simple-crud-tanstack-fastify_db_data
     environment:
       POSTGRES_USER: todo_user
       POSTGRES_PASSWORD: todo_pass

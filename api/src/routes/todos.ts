@@ -1,7 +1,6 @@
 import { FastifyPluginAsync } from 'fastify';
 import { z } from 'zod';
-import { todos } from '../db/schema'; // optional
-// drizzle imports for queries:
+import { todos } from '../db/schema';
 import { asc, eq } from 'drizzle-orm';
 
 const todoBody = z.object({
